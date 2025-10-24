@@ -16,6 +16,9 @@ python client.py
 Linux - WSL
 ```
 wsl
+#connect to remote desktop..
+#open terminal
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O Miniforge3-Linux-x86_64.sh
 chmod +x Miniforge3-Linux-x86_64.sh
 ./Miniforge3-Linux-x86_64.sh
 conda config --set auto_activate_base false
