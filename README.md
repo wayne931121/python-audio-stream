@@ -1,6 +1,10 @@
 # python-audio-stream
 write by gemini, modify by wayne931121.
 
+# Why I need this script
+
+I want to hear sound from wsl linux, after search I know pulseaudio, but when I use it, still no sound, even I changed ```export PULSE_SERVER=tcp:ipv4``` ```sudo nano /etc/pulse/default.pa``` ```sudo nano /etc/pulse/daemon.conf``` in https://github.com/microsoft/WSL/issues/4205, so I only can find another way to do this, and frist I think python and find a project https://github.com/richardos/audio-stream, but unlucky pyaudio not able to run in wsl, and after searching network, I know sounddevice and portaudio, and I don't know how to use them. To get script in short time, I use GEMINI, and them debug change the int16 to flloat32 in script them change and test ip address that can use, finally I success.
+
 Stream Audio from Linux WSL Xcef to Windows
 
 server.py: audio server, websocket client, run second
