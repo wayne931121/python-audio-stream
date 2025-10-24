@@ -37,7 +37,7 @@ python server.py
 
 in server and client .py modify
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/82633e49-6e35-4f80-99c2-5440a96caada" />
+<img alt="image" src="https://github.com/user-attachments/assets/82633e49-6e35-4f80-99c2-5440a96caada" />
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ca54c29-6da1-411a-b23c-25e987149d18" />
 
