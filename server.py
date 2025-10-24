@@ -1,139 +1,1 @@
-import socket
-
-import sounddevice as sd
-
-import numpy as np
-
-
-
-# --- Audio and Network Configuration ---
-
-# Must match the server's configuration
-
-SAMPLE_RATE = 44100
-
-CHANNELS = 1
-
-CHUNK_SIZE = 1024
-
-SERVER_HOST = '192.168.1.105'  # Change this to the server's IP address
-
-PORT = 12345
-
-
-
-def callback(indata, frames, time, status, conn):
-
-    """
-
-    This function is called by the sounddevice input stream for each chunk of audio.
-
-    It runs in a separate thread.
-
-    """
-
-    if status:
-
-        print(f"Audio status: {status}")
-
-    
-
-    # 1. Convert the NumPy array (indata) to bytes
-
-    audio_data_bytes = indata.tobytes()
-
-    
-
-    # 2. Send the bytes over the socket
-
-    try:
-
-        conn.sendall(audio_data_bytes)
-
-    except ConnectionRefusedError:
-
-        print("Connection refused. Is the server running?")
-
-        raise sd.CallbackStop
-
-    except Exception as e:
-
-        # Stop the stream on network error
-
-        print(f"Network error: {e}")
-
-        raise sd.CallbackStop
-
-
-
-def start_client():
-
-    """Captures audio and connects to the server to stream it."""
-
-    
-
-    # Create a TCP socket and connect to the server
-
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-    try:
-
-        s.connect((SERVER_HOST, PORT))
-
-        print(f"Connected to server at {SERVER_HOST}:{PORT}")
-
-    except ConnectionRefusedError:
-
-        print(f"Connection refused. Ensure the server is running at {SERVER_HOST}:{PORT}.")
-
-        return
-
-
-
-    print("Streaming audio from microphone... Press Ctrl+C to stop.")
-
-
-
-    # Open the input stream, specifying the callback function
-
-    # 'dtype=int16' is a common and efficient format for raw audio transmission
-
-    try:
-
-        with sd.InputStream(
-
-            samplerate=SAMPLE_RATE, 
-
-            channels=CHANNELS, 
-
-            dtype='float32', 
-
-            blocksize=CHUNK_SIZE, 
-
-            callback=lambda indata, frames, time, status: callback(indata, frames, time, status, s)
-
-        ):
-
-            # Keep the main thread alive until the user stops the stream
-
-            while True:
-
-                sd.sleep(100)
-
-    except KeyboardInterrupt:
-
-        print("\nStopping client.")
-
-    except Exception as e:
-
-        print(f"An error occurred: {e}")
-
-    finally:
-
-        s.close()
-
-
-
-if __name__ == '__main__':
-
-    start_client()
+import socketimport sounddevice as sdimport numpy as np# --- Audio and Network Configuration ---# Must match the server's configurationSAMPLE_RATE = 44100CHANNELS = 1CHUNK_SIZE = 1024SERVER_HOST = '172.18.16.1'  # Change this to the server's IP addressPORT = 12345def callback(indata, frames, time, status, conn):    """    This function is called by the sounddevice input stream for each chunk of audio.    It runs in a separate thread.    """    if status:        print(f"Audio status: {status}")        # 1. Convert the NumPy array (indata) to bytes    audio_data_bytes = indata.tobytes()        # 2. Send the bytes over the socket    try:        conn.sendall(audio_data_bytes)    except ConnectionRefusedError:        print("Connection refused. Is the server running?")        raise sd.CallbackStop    except Exception as e:        # Stop the stream on network error        print(f"Network error: {e}")        raise sd.CallbackStopdef start_client():    """Captures audio and connects to the server to stream it."""        # Create a TCP socket and connect to the server    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)    try:        s.connect((SERVER_HOST, PORT))        print(f"Connected to server at {SERVER_HOST}:{PORT}")    except ConnectionRefusedError:        print(f"Connection refused. Ensure the server is running at {SERVER_HOST}:{PORT}.")        return    print("Streaming audio from microphone... Press Ctrl+C to stop.")    # Open the input stream, specifying the callback function    # 'dtype=int16' is a common and efficient format for raw audio transmission    try:        with sd.InputStream(            samplerate=SAMPLE_RATE,             channels=CHANNELS,             dtype='float32',             blocksize=CHUNK_SIZE,             callback=lambda indata, frames, time, status: callback(indata, frames, time, status, s)        ):            # Keep the main thread alive until the user stops the stream            while True:                sd.sleep(100)    except KeyboardInterrupt:        print("\nStopping client.")    except Exception as e:        print(f"An error occurred: {e}")    finally:        s.close()if __name__ == '__main__':    start_client()

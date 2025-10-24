@@ -9,7 +9,7 @@ import numpy as np
 SAMPLE_RATE = 44100  # Samples per second (Hz)
 CHANNELS = 1         # Mono audio
 CHUNK_SIZE = 1024    # Number of frames per buffer
-HOST = '192.168.1.105'     # Listen on all available interfaces
+HOST = '172.18.16.1'     # Listen on all available interfaces
 PORT = 12345         # The port to connect to
 
 def start_server():
