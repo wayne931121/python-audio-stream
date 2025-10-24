@@ -28,8 +28,8 @@ conda install python=3.7
 sudo apt-get install libportaudio2
 pip install sounddevice numpy
 sudo apt install pulseaudio
-pulseaudio -D
 
+pulseaudio -D
 python server.py
 ```
 
