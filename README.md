@@ -1,4 +1,4 @@
-# python-audio-stream
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/626fa570-47e4-4132-a7a2-f3c30169adf5" /># python-audio-stream
 write by gemini, modify by wayne931121.
 
 Stream Audio from Linux WSL Xcef to Windows
@@ -48,6 +48,10 @@ in server and client .py modify
 ## Allow find and share
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/80fc83eb-44c0-4b5e-bb27-6c58dcd52a7a" />
+
+(https://www.youtube.com/watch?v=v0Zp-VdzXOY)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3626a836-8869-47e3-8dc1-82ea730221d8" />
+
 
 ## Test in Linux - WSL
 ```
