@@ -39,21 +39,21 @@ in server and client .py modify
 
 <img alt="image" src="https://github.com/user-attachments/assets/82633e49-6e35-4f80-99c2-5440a96caada" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ca54c29-6da1-411a-b23c-25e987149d18" />
+<img alt="image" src="https://github.com/user-attachments/assets/5ca54c29-6da1-411a-b23c-25e987149d18" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/50978f65-f7c7-484f-8da2-b10d54d86097" />
+<img alt="image" src="https://github.com/user-attachments/assets/50978f65-f7c7-484f-8da2-b10d54d86097" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5e34019d-0ece-4324-9859-288b7fba7569" />
+<img alt="image" src="https://github.com/user-attachments/assets/5e34019d-0ece-4324-9859-288b7fba7569" />
 
 
 
 
 ## Allow find and share
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/80fc83eb-44c0-4b5e-bb27-6c58dcd52a7a" />
+<img alt="image" src="https://github.com/user-attachments/assets/80fc83eb-44c0-4b5e-bb27-6c58dcd52a7a" />
 
 (https://www.youtube.com/watch?v=v0Zp-VdzXOY)
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3626a836-8869-47e3-8dc1-82ea730221d8" />
+<img alt="image" src="https://github.com/user-attachments/assets/3626a836-8869-47e3-8dc1-82ea730221d8" />
 
 
 ## Test in Linux - WSL
