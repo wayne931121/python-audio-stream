@@ -3,9 +3,9 @@ write by gemini, modify by wayne931121.
 
 Stream Audio from Linux WSL Xcef to Windows
 
-server.py: audio server, websocket client, run in second
+server.py: audio server, websocket client, run second
 
-client.py: audio client, websocket "server", run in "first"!!!
+client.py: audio client, websocket "server", run "first"!!!
 
 Windows
 ```
