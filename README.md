@@ -1,6 +1,11 @@
 # python-audio-stream
 write by gemini, modify by wayne931121.
 
+Stream Audio from Linux WSL Xcef to Windows
+
+server.py: audio server, websocket client, run in second
+
+client.py: audio client, websocket "server", run in "first"!!!
 
 Windows
 ```
