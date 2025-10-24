@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/626fa570-47e4-4132-a7a2-f3c30169adf5" /># python-audio-stream
+# python-audio-stream
 write by gemini, modify by wayne931121.
 
 Stream Audio from Linux WSL Xcef to Windows
