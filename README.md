@@ -49,5 +49,8 @@ Allow find and share
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/80fc83eb-44c0-4b5e-bb27-6c58dcd52a7a" />
 
-
+Test in Linux - WSL
+```
+ping your-ip
+```
 
