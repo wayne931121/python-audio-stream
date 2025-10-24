@@ -15,6 +15,7 @@ python client.py
 
 Linux - WSL
 ```
+wsl
 chmod +x Miniforge3-Linux-x86_64.sh
 ./Miniforge3-Linux-x86_64.sh
 conda config --set auto_activate_base false
